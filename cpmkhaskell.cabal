@@ -1,0 +1,50 @@
+cabal-version:      3.0
+name:               cpmkhaskell
+version:            0.1.0.0
+synopsis:           C/C++ Project Maker
+
+-- A longer description of the package.
+-- description:
+homepage:           https://github.com/Sampie159/cpmkhaskell
+
+-- A URL where users can report bugs.
+-- bug-reports:
+license:            MIT
+license-file:       LICENSE
+author:             Samuel Amboni
+maintainer:         38163547+Sampie159@users.noreply.github.com
+
+-- A copyright notice.
+-- copyright:
+category:           CLI
+extra-source-files: CHANGELOG.md
+
+library
+    exposed-modules:  Cpmk
+
+    -- Modules included in this library but not exported.
+    -- other-modules:
+
+    -- LANGUAGE extensions used by modules in this package.
+    -- other-extensions:
+    build-depends:    base ^>=4.16.4.0,
+                      directory,
+                      filepath
+
+    hs-source-dirs:   lib
+    default-language: Haskell2010
+
+executable cpmkhaskell
+    main-is:          Main.hs
+
+    -- Modules included in this executable, other than Main.
+    -- other-modules:
+
+    -- LANGUAGE extensions used by modules in this package.
+    -- other-extensions:
+    build-depends:
+        base ^>=4.16.4.0,
+        cpmkhaskell
+
+    hs-source-dirs:   src
+    default-language: Haskell2010
